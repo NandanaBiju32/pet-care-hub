@@ -4,7 +4,7 @@
 
 ## 📌 About the Project
 
-Pet Care Hub is a web-based application designed to make pet care management easier and more convenient. It provides a platform where users can manage pet information, explore pet adoption opportunities, access healthcare information, book appointments, and manage pet-related products.
+Pet Care Hub is a web-based application designed to make pet care management easier and more convenient. It provides a platform where users can manage pet information, explore pet adoption opportunities, purchase pet foods and accessories.
 
 The application aims to connect pet owners with useful pet care services through a simple and user-friendly interface.
 
@@ -13,7 +13,7 @@ The application aims to connect pet owners with useful pet care services through
 * To simplify pet care management.
 * To provide easy access to pet adoption services.
 * To help users manage pet health information.
-* To make appointment booking convenient.
+* To make purchasing pet related items easily.
 * To provide an organized platform for pet-related services.
 
 ## ✨ Features
@@ -23,6 +23,7 @@ The application aims to connect pet owners with useful pet care services through
 * User registration.
 * Secure login and logout.
 * User account management.
+* Interactivity
 
 ### 🐶 Pet Management
 
@@ -37,7 +38,7 @@ The application aims to connect pet owners with useful pet care services through
 
 ### 🩺 Pet Healthcare
 
-* Access pet healthcare with medicines.
+* Access pet medicines.
 
 ### 🛒 Pet Product Management
 
@@ -70,7 +71,7 @@ The application aims to connect pet owners with useful pet care services through
 
 **Project Type:** Academic Project
 
-**Qualification:** Bachelor of Computer Applications (BCA)
+**Qualification:** Bachelor of Computer Applications (BCA) Honours
 
 ## 👩‍💻 Developer
 
