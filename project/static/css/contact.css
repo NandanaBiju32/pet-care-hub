@@ -1,0 +1,27 @@
+.contact-box{
+
+    width:400px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-box img{
+
+    width:100%;
+    border-radius:10px;
+}
+
+.contact-box button{
+
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#ff914d;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+
+    <link rel="stylesheet" href="{% static 'css/adopt.css' %}">
+</head>
+<body>
+{% block content %}
+<header>
+
+    <h1>🐾 Pets Available For Adoption</h1>
+
+    <a href="/">
+        <button class="home-btn">Home</button>
+    </a>
+
+</header>
+
+
+<section class="pet-section">
+
+    <!-- DEFAULT PETS -->
+
+    {% for pet in default_pets %}
+
+    <div class="pet-card">
+
+
+
+        <h2>{{ pet.name }}</h2>
+
+        <table>
+
+            <tr>
+                <td><b>Pet Type</b></td>
+                <td>{{ pet.pet_type }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Breed</b></td>
+                <td>{{ pet.breed }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Place</b></td>
+                <td>{{ pet.place }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Age</b></td>
+                <td>{{ pet.age }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Weight</b></td>
+                <td>{{ pet.weight }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Owner Name</b></td>
+                <td>{{ pet.owner_name }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Contact</b></td>
+                <td>{{ pet.contact }}</td>
+            </tr>
+
+        </table>
+        <button class="adopt-btn">
+            Adopt Now
+        </button>
+
+    </div>
+
+    {% endfor %}
+
+
+    <!-- DATABASE PETS -->
+
+    {% for pet in db_pets %}
+
+    <div class="pet-card">
+
+
+
+        <h2>{{ pet.name }}</h2>
+
+        <table>
+
+            <tr>
+                <td><b>Pet Type</b></td>
+                <td>{{ pet.pet_type }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Breed</b></td>
+                <td>{{ pet.breed }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Place</b></td>
+                <td>{{ pet.place }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Age</b></td>
+                <td>{{ pet.age }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Weight</b></td>
+                <td>{{ pet.weight }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Owner Name</b></td>
+                <td>{{ pet.owner_name }}</td>
+            </tr>
+
+            <tr>
+                <td><b>Contact</b></td>
+                <td>{{ pet.contact }}</td>
+            </tr>
+
+        </table>
+
+        <button class="adopt-btn">
+            Adopt Now
+        </button>
+    </div>
+
+    {% endfor %}
+
+</section>
+
+<!--<div class="add-pet">-->
+
+<!--    <button>Add Pet</button>-->
+
+<!--</div>-->
+<div class="add-pet">
+
+    <a href="{% url 'add_pet' %}">
+        <button>Add Pet</button>
+    </a>
+
+</div>
+{% endblock %}
+</body>
+</html>

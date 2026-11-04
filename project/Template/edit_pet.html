@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Pet</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/auth.css' %}">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <form method="POST"
+          class="auth-form">
+
+        {% csrf_token %}
+
+        <h1>Edit Pet</h1>
+
+
+        <input type="text"
+               name="name"
+               value="{{ pet.name }}"
+               placeholder="Pet Name"
+               required>
+
+
+        <input type="text"
+               name="breed"
+               value="{{ pet.breed }}"
+               placeholder="Breed"
+               required>
+
+
+        <input type="text"
+               name="place"
+               value="{{ pet.place }}"
+               placeholder="Place"
+               required>
+
+
+        <input type="text"
+               name="age"
+               value="{{ pet.age }}"
+               placeholder="Age"
+               required>
+
+
+        <button type="submit">
+
+            Update Pet
+
+        </button>
+
+    </form>
+
+</div>
+{% endblock %}
+</body>
+</html>

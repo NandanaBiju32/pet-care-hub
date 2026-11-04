@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Contact Owner</title>
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+
+<body>
+
+<div class="contact-box">
+
+    <h1>{{ pet.name }}</h1>
+
+    <h2>Owner : {{ pet.owner_name }}</h2>
+
+    <h3>Contact : {{ pet.contact }}</h3>
+
+    <h3>Place : {{ pet.place }}</h3>
+
+    <button>
+
+        Contact Owner
+
+    </button>
+
+</div>
+{% endblock %}
+</body>
+
+</html>

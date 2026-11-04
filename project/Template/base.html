@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>🐾 PetCare Hub</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🐾 PetCare Hub
+        </div>
+
+       <nav>
+
+    <a href="{% url 'home' %}">
+        Home
+    </a>
+
+    <a href="{% url 'home' %}#accessories">
+        Accessories
+    </a>
+
+    <a href="{% url 'home' %}#food">
+        Food
+    </a>
+
+    <a href="{% url 'home' %}#medicine">
+        Medicine
+    </a>
+
+    <a href="{% url 'home' %}#contact">
+        Contact
+    </a>
+<a href="{% url 'products' %}">
+    View
+</a>
+        <a href="{% url 'dashboard' %}">
+    Dashboard
+</a>
+
+<!--<div class="button-group">-->
+
+<!--    <a href="{% url 'login' %}">-->
+
+<!--        <button class="login-btn">-->
+
+<!--            Login-->
+
+<!--        </button>-->
+
+<!--    </a>-->
+
+
+<!--    <a href="{% url 'register' %}">-->
+
+<!--    <button class="register-btn">-->
+
+<!--        Register-->
+
+<!--    </button>-->
+
+<!--</a>-->
+<!--&lt;!&ndash;    <a href="{% url 'logout' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <button class="logout-btn">Logout</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </a>&ndash;&gt;-->
+    <div class="button-group">
+
+    {% if user.is_authenticated %}
+
+        <a href="{% url 'logout' %}">
+
+            <button class="logout-btn">
+
+                Logout
+
+            </button>
+
+        </a>
+
+    {% else %}
+
+        <a href="{% url 'login' %}">
+
+            <button class="login-btn">
+
+                Login
+
+            </button>
+
+        </a>
+
+
+        <a href="{% url 'register' %}">
+
+            <button class="register-btn">
+
+                Register
+
+            </button>
+
+        </a>
+
+    {% endif %}
+
+</div>
+
+</div>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    <div class="content">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

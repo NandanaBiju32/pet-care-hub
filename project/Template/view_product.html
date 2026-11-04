@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+
+    <title>{{ product.name }}</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/products.css' %}">
+
+</head>
+
+<body>
+
+<div class="product-container">
+
+    <img src="{{ product.image }}"
+         class="product-image">
+
+
+    <div class="product-content">
+
+        <h1>{{ product.name }}</h1>
+
+        <h2>₹{{ product.price }}</h2>
+
+        <h3>{{ product.category }}</h3>
+
+        <p>
+
+            {{ product.description }}
+
+        </p>
+
+        <a href="{% url 'payment' %}?product={{ product.name }}&price={{ product.price }}">
+
+            <button class="buy-btn">
+
+                Buy Now
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+{% endblock %}
+</body>
+</html>

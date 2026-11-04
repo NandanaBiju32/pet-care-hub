@@ -1,0 +1,126 @@
+/**{*/
+/*    margin:0;*/
+/*    padding:0;*/
+/*    box-sizing:border-box;*/
+/*    font-family:Arial, Helvetica, sans-serif;*/
+/*}*/
+
+/*body{*/
+/*    background:#f4f4f4;*/
+/*}*/
+
+
+/*!* HEADER *!*/
+
+/*header{*/
+
+/*    display:flex;*/
+/*    justify-content:space-between;*/
+/*    align-items:center;*/
+/*    padding:20px 60px;*/
+/*    background:#68e1f6;*/
+/*}*/
+
+/*.logo{*/
+
+/*    font-size:35px;*/
+/*    font-weight:bold;*/
+/*    color:white;*/
+/*}*/
+
+/*nav a{*/
+
+/*    text-decoration:none;*/
+/*    margin:0 15px;*/
+/*    color:black;*/
+/*    font-size:18px;*/
+/*}*/
+
+/* DASHBOARD TITLE */
+
+.title{
+
+    text-align:center;
+    margin:30px 0;
+    color:#ff914d;
+    font-size:40px;
+}
+
+
+/* BUTTON */
+
+.btn{
+
+    display:inline-block;
+    margin-bottom:20px;
+    padding:12px 20px;
+    background:#ff914d;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+
+    background:black;
+}
+
+
+/* TABLE */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* TABLE HEAD */
+
+table th{
+
+    background:#ff914d;
+    color:white;
+    padding:15px;
+}
+
+
+/* TABLE DATA */
+
+table td{
+
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+
+/* IMAGE */
+
+table img{
+
+    border-radius:10px;
+}
+
+
+
+
+table a{
+
+    text-decoration:none;
+    font-weight:bold;
+    color:#ff914d;
+}
+
+table a:hover{
+
+    color:black;
+}
+h1
+{
+    align-content: center;
+    color: rebeccapurple;
+}

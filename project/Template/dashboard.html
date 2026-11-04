@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">
+
+    Welcome !!!!!
+
+</h1>
+
+
+<!-- ADD PET BUTTON -->
+
+<a href="{% url 'add_pet' %}"
+   class="btn">
+
+    Add Pet
+
+</a>
+
+
+<!-- PET TABLE -->
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Place</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Owner</th>
+        <th>Contact</th>
+        <th>Actions</th>
+
+    </tr>
+
+
+    {% for pet in pets %}
+
+    <tr>
+
+
+
+        <td>{{ pet.name }}</td>
+
+        <td>{{ pet.breed }}</td>
+
+        <td>{{ pet.place }}</td>
+
+        <td>{{ pet.age }}</td>
+
+        <td>{{ pet.weight }}</td>
+
+        <td>{{ pet.owner_name }}</td>
+
+        <td>{{ pet.contact }}</td>
+
+
+        <!-- ACTION BUTTONS -->
+
+        <td>
+
+           <a href="{% url 'edit_pet' pet.id %}">
+
+    Edit
+
+</a>
+
+            |
+
+            <a href="{% url 'delete_pet' pet.id %}">
+
+                Delete
+
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

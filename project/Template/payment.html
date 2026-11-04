@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Page</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/payment.css' %}">
+
+</head>
+<body>
+
+<div class="payment-container">
+
+    <div class="payment-box">
+
+        <h1>Payment Details</h1>
+
+
+        <!-- PRODUCT DETAILS -->
+
+        <div class="product-details">
+
+    <!-- PRODUCT IMAGE -->
+
+    <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500"
+         alt="Pet Product">
+
+
+    <!-- PRODUCT NAME -->
+
+    <h2>{{ product }}</h2>
+
+
+    <!-- DESCRIPTION -->
+
+    <p>
+
+        High-quality pet product specially designed
+        for your lovely pets. Healthy, safe and
+        recommended by pet care experts.
+
+    </p>
+
+
+    <!-- PRICE -->
+
+    <h3>Price : ₹{{ price }}</h3>
+
+</div>
+
+
+        <!-- PAYMENT FORM -->
+
+        <form action="{% url 'success' %}" method="POST">
+             {% csrf_token %}
+
+            <label>
+                Customer Name
+            </label>
+
+            <input type="text"
+                   placeholder="Enter Name"
+                   required>
+
+
+            <label>
+                Address
+            </label>
+
+            <textarea placeholder="Enter Address"
+                      rows="4"
+                      required></textarea>
+
+
+            <label>
+                Phone Number
+            </label>
+
+            <input type="text"
+                   placeholder="Enter Phone Number"
+                   required>
+
+
+            <label>
+                Product Quantity
+            </label>
+
+            <input type="number"
+                   min="1"
+                   value="1"
+                   required>
+
+
+            <!-- PAYMENT METHODS -->
+
+<!-- PAYMENT METHODS -->
+
+<div class="payment-method">
+
+    <h3>Select Payment Method</h3>
+
+    <div class="radio-group">
+
+        <label>
+
+            <input type="radio"
+                   name="payment_method"
+                   value="cod"
+                   checked>
+
+            Cash On Delivery
+
+        </label>
+
+    </div>
+
+    <div class="radio-group">
+
+        <label>
+
+            <input type="radio"
+                   name="payment_method"
+                   value="upi">
+
+            UPI Payment
+
+        </label>
+
+    </div>
+
+    <div class="radio-group">
+
+        <label>
+
+            <input type="radio"
+                   name="payment_method"
+                   value="debit">
+
+            Debit Card
+
+        </label>
+
+    </div>
+
+    <div class="radio-group">
+
+        <label>
+
+            <input type="radio"
+                   name="payment_method"
+                   value="credit">
+
+            Credit Card
+
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- PLACE ORDER BUTTON -->
+
+
+    <button type="submit">
+
+        Place Order
+
+    </button>
+
+
+</form>
+
+</div>
+
+</div>
+{% endblock %}
+</body>
+
+</html>
